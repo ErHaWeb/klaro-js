@@ -39,14 +39,39 @@ export const themes = {
         'notice-max-width': 'calc(100vw - 60px)',
         'notice-position': 'fixed',
     },
-    light: {
-        'button-text-color': '#fff',
-        'dark1': '#fafafa',
-        'dark2': '#777',
-        'dark3': '#555',
-        'light1': '#444',
-        'light2': '#666',
-        'light3': '#111',
-        'green3': '#f00',
+    dark: {
+        'button-text-color': "#fff",
+        'dark1': "#333",
+        'dark2': "#5c5c5c",
+        'dark3': "#cccccc",
+        'light1': "#fafafa",
+        'light2': "#c8c8c8",
+        'light3': "#a0a0a0",
+        'blue1': "#2581c4",
+        'blue2': "#459cdc",
+        'blue3': "#30a9ff",
+        'green1': "#1a936f",
+        'green2': "#24cc9a",
+        'green3': "#48dfb2"
     },
+    light: {
+        'button-text-color': "#fff",
+        'dark1': "#fafafa",
+        'dark2': "#777",
+        'dark3': "#555",
+        'light1': "#444",
+        'light2': "#666",
+        'light3': "#111",
+        'blue1': "#2581c4",
+        'blue2': "#459cdc",
+        'blue3': "#30a9ff",
+        'green1': "#1a936f",
+        'green2': "#24cc9a",
+        'green3': "#48dfb2"
+    },
+    light_neutral: {
+        'dark1': "#fafafa",
+        'dark3': "#555",
+        'light1': "#444"
+    }
 }
