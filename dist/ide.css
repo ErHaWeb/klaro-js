@@ -701,6 +701,8 @@ to create a white background.
   margin-top: 0.5em;
 }
 .klaro .cookie-modal-notice {
+  padding: 1em;
+  padding-top: 0.2em;
   background-color: #333;
   background-color: var(--dark1, #333);
   color: #fafafa;
@@ -714,8 +716,6 @@ to create a white background.
       transform: translateY(-50%);
   position: fixed;
   overflow: auto;
-  padding: 1em;
-  padding-top: 0.2em;
 }
 @media (min-width: 400px) {
   .klaro .cookie-modal-notice {
