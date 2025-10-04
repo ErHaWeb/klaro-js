@@ -150,18 +150,25 @@ export default class ConsentModal extends React.Component {
                         {acceptAllButton}
                     </div>
                     {!config.disablePoweredBy && (
-                        <p className="cm-powered-by">
-                            <a
-                                target="_blank"
-                                href={
-                                    config.poweredBy ||
-                                    'https://kiprotect.com/klaro'
-                                }
-                                rel="noopener"
-                            >
-                                {t(['poweredBy'])}
-                            </a>
-                        </p>
+                        config.htmlTexts ? (
+                            <div className="cm-powered-by">
+                                <Text
+                                    config={config}
+                                    text={t(['poweredBy'])}
+                                    keyPath="poweredBy"
+                                />
+                            </div>
+                        ) : (
+                            <p className="cm-powered-by">
+                                <a
+                                    href={config.poweredBy || 'https://kiprotect.com/klaro'}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {t(['poweredBy'])}
+                                </a>
+                            </p>
+                        )
                     )}
                 </div>
             </div>

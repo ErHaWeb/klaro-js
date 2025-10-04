@@ -9,6 +9,7 @@ import { Configs } from './configs';
 import { Styling } from './styling';
 import { Translations } from './translations';
 import { Tabs, Tab } from './tabs';
+import Text from '../text';
 
 export class IDEModal extends React.Component {
     constructor(props) {
@@ -66,18 +67,28 @@ export class IDEModal extends React.Component {
                         </div>
                         <div className="cm-footer">
                             <div className="cm-footer-buttons">Buttons</div>
-                            <p className="cm-powered-by">
-                                <a
-                                    target="_blank"
-                                    href={
-                                        config.poweredBy ||
-                                        'https://kiprotect.com/klaro'
-                                    }
-                                    rel="noopener"
-                                >
-                                    {t(['poweredBy'])}
-                                </a>
-                            </p>
+                            {config.htmlTexts
+                                ? (
+                                    // HTML-Ausgabe aus Übersetzung (z. B. <p><a …>…</a></p>)
+                                    <Text
+                                        config={config}
+                                        text={t(['poweredBy'])}
+                                        keyPath="poweredBy"
+                                    />
+                                ) : (
+                                    <p className="cm-powered-by">
+                                        <a
+                                            target="_blank"
+                                            href={
+                                                config.poweredBy ||
+                                                'https://kiprotect.com/klaro'
+                                            }
+                                            rel="noopener"
+                                        >
+                                            {t(['poweredBy'])}
+                                        </a>
+                                    </p>
+                                )}
                         </div>
                     </div>
                 </div>
